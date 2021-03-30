@@ -3,13 +3,13 @@ import random as rand
 class RSA:
     def __init__(self):
         print(self.r())
-        self.p, self.q = map(int,input().split()) #p,q
-        self.N = self.p * self.q                   #N
+        self.p, self.q = map(int,input().split()) 
+        self.N = self.p * self.q                   
         print(self.N)
-        self.N1 = (self.p-1) * (self.q-1)           #N1
+        self.N1 = (self.p-1) * (self.q-1)           
         print(self.N1)
         print(self.genEList(self.N1))
-        self.e = int(input("請輸入e: "))                          #e
+        self.e = int(input("請輸入e: "))                         
         print(self.genDList(self.e,self.N1))
         self.d = int(input("請輸入d: "))
     def encrypt(self):
